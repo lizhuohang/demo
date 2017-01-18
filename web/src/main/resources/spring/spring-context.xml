@@ -3,4 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="usersDAO" class="com.lzh.demo.web.dao.UsersDAO">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="userService" class="com.lzh.demo.web.service.UserService">
+        <property name="userDao" ref="usersDAO"></property>
+    </bean>
 </beans>
