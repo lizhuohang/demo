@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class JsonController {
     @RequestMapping(value="/json/{name}", method = RequestMethod.GET)
-    public @ResponseBody
-    Shop getShopInJSON(@PathVariable String name) {
+    public @ResponseBody Shop getShopInJSON(@PathVariable String name) {
         System.out.println("-----请求json数据--------");
         Shop shop = new Shop();
         shop.setName(name);
